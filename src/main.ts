@@ -1,0 +1,1 @@
+export const AGENT_AI_SDK = 'AGENT-AI-SDK';
