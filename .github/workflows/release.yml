@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch: # Allows manual triggering from GitHub Actions UI
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -26,17 +27,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Install Dependencies
+        run: npm run build
+
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
-          publish: npm run build && npm run changeset publish
+          publish: npm run changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build
-        if: steps.changesets.outputs.hasChangesets == 'true'
-        run: npm run build
-
-      - name: Publish
-        if: steps.changesets.outputs.hasChangesets == 'true'
-        run: npm run changeset publish
