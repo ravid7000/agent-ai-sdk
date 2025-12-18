@@ -1,5 +1,14 @@
 # agent-ai-sdk
 
+## 0.0.4
+
+### Patch Changes
+
+- 000f844: changeset publish should be working
+- 000f844: changeset publish
+- 000f844: changeset workflow configure
+- 000f844: changeset publish
+
 ## 0.0.3
 
 ### Patch Changes
