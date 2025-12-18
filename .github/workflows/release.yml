@@ -32,3 +32,11 @@ jobs:
           publish: npm run build && npm run changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build
+        if: steps.changesets.outputs.hasChangesets == 'true'
+        run: npm run build
+
+      - name: Publish
+        if: steps.changesets.outputs.hasChangesets == 'true'
+        run: npm run changeset publish
