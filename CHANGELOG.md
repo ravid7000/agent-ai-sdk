@@ -1,5 +1,11 @@
 # agent-ai-sdk
 
+## 0.0.6
+
+### Patch Changes
+
+- 54d5a1d: minor updates
+
 ## 0.0.5
 
 ### Patch Changes
