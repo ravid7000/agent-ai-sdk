@@ -1,13 +1,13 @@
 {
-  "name": "agent-ai-sdk",
-  "private": true,
+  "name": "@agent-ai/sdk",
   "version": "0.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "changeset": "changeset"
+    "changeset": "changeset",
+    "ci:publish": "npm run build && changeset publish --access public"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.8",
@@ -25,5 +25,9 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   }
 }
