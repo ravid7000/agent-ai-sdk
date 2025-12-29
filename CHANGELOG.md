@@ -1,5 +1,11 @@
 # agent-ai-sdk
 
+## 0.0.5
+
+### Patch Changes
+
+- ea83ccf: changeset workflow setup
+
 ## 0.0.4
 
 ### Patch Changes
