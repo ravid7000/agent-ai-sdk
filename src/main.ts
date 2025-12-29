@@ -1,1 +1,1 @@
-export const AGENT_AI_SDK = 'AGENT-AI-SDK';
+export const AGENT_AI_SDK = 'AGENT-AI-SDK_v1';
